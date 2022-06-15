@@ -12,10 +12,14 @@ const PostCardContainer= styled.div`
   border-radius: 0.5rem; /* 8px */;
   padding:1.5rem;
   padding-bottom:2rem;
+  
   @media screen and (max-width: ${SCREENS.lg}){
     padding:0;
     padding-bottom:1.5rem;
   }
+  display:flex ;
+  flex-direction:column ;
+  justify-content:space-between ;
 `
 
 const FeaturedImageContainer = styled.div`
@@ -24,6 +28,7 @@ const FeaturedImageContainer = styled.div`
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   padding-bottom:20rem ;
   margin-bottom: 1.5rem;
+
 `
 const FeaturedImage =styled.img`  
   object-position: top;
@@ -122,6 +127,7 @@ const Continue =styled.span`
   color:white;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
+  margin-bottom:0 ;
   cursor: pointer;
   &:hover{
     transform: translateY(0.25rem);

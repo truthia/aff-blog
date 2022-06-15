@@ -108,7 +108,6 @@ const AdjacentPostCard = ({post,position}) => {
         <Date>{moment(post.createdAt).format('MMM DD, YYYY')}</Date>
         <Title>{post.title}</Title>
         </FeaturedInfo>
-        <Link href={`/bai-viet/${post.slug}`}><LinkSpan /></Link>
         {position==="LEFT"&&(
              <LeftArrow>
                 <ArrowIcon icon={faAngleLeft} />
@@ -119,6 +118,8 @@ const AdjacentPostCard = ({post,position}) => {
                 <ArrowIcon icon={faAngleRight} />
             </RightArrow>
         )}
+        <Link href={`/bai-viet/${post.slug}`}><LinkSpan /></Link>
+       
     </Container>
   )
 }

@@ -14,3 +14,4 @@ export {default as PostDetail
 export {default as FeaturedPostCard} from "./FeaturedPostCard"
 export {default as SearchBar } from './SearchBar'
 export {default as AdjacentPostCard} from "./AdjacentPostCard"
+export {default as MobileMenu} from "./MobileMenu"

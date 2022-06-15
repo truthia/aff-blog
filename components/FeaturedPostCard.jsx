@@ -95,7 +95,6 @@ const FeaturedPostCard = ({ post }) => (
       <Date>{moment(post.createdAt).format('MMM DD, YYYY')}</Date>
       <Title>{post.title}</Title>
       <AuthorImageContainer >
-      
         <AuthorImage
           unoptimized
           alt={post.author.name}

@@ -3,6 +3,7 @@ import React,{useContext,useState,useEffect} from 'react'
 import styled from 'styled-components'
 import { getCategories } from '../services'
 import { SCREENS } from '../variables/Variables'
+import MobileMenu from './MobileMenu'
 
 const categories= [{name:"React",slug:"react"},{name:"Web Development",slug:"web-dev"}]
 
@@ -38,9 +39,7 @@ const HeaderContainer = styled.div`
     align-items:center ;
     justify-content:space-between ;
 
-    @media screen and (max-width: ${SCREENS.lg}){
-    flex-direction:column ;
-  }
+
 `
 const LogoContainer=styled.div`
     display:block ;
@@ -87,6 +86,7 @@ const Header = () => {
   return (
     <Container>
         <HeaderContainer>
+          <MobileMenu />
             <LogoContainer>
                 <Link href="/">
                     <Logo >TrungTran</Logo>
