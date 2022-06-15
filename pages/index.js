@@ -86,7 +86,7 @@ const LoadMoreContainer= styled.div`
 const LoadMore =styled.span`
   display:inline-block ;
   text-align:center;
-  width:12rem ;
+  width:8rem ;
   transition:all 0.5s ;
   background-color:#db2777 ;
   font-size: 24px;
@@ -102,7 +102,7 @@ const LoadMore =styled.span`
   }
 `
 const LoadMoreIcon=styled(FontAwesomeIcon)`
-  height:3rem ;
+  height:1.5rem ;
 `
 
 export default function Home({posts}) {
