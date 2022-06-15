@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { getCategories } from '../services'
 import { SCREENS } from '../variables/Variables'
 import MobileMenu from './MobileMenu'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const categories= [{name:"React",slug:"react"},{name:"Web Development",slug:"web-dev"}]
 
@@ -75,18 +77,33 @@ const CategoryLink=styled.span`
     
     }
 `
+const BarIcon=styled(FontAwesomeIcon)`
+  display:none ;
+  height:2rem ;
+  color:white;
+  @media screen and (max-width: ${SCREENS.md}){
+      display:block ;
+   
+    }
 
+`
 const Header = () => {
   const [categories, setCategories]=useState([])
+  const [menuToggle, setMenuToggle]=useState(false)
   useEffect(()=>{
     getCategories().then((newCategories)=>{
       setCategories(newCategories)
     })
   },[])
+
+  const closeHandler=(bool)=>{
+    setMenuToggle(bool)
+  }
   return (
     <Container>
         <HeaderContainer>
-          <MobileMenu />
+          <MobileMenu open={menuToggle} onClose={closeHandler} />
+            <BarIcon icon={faBars} onClick={()=>setMenuToggle(true)} />
             <LogoContainer>
                 <Link href="/">
                     <Logo >TrungTran</Logo>
