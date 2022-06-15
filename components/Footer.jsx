@@ -100,9 +100,10 @@ const Footer = () => {
     const [featuredPosts, setFeaturedPosts]=useState([])
     useEffect(()=>{
         getRecentPostsFooter().then((data)=>{
-            setRecentPosts(data);
+           data.reverse(); setRecentPosts(data);
         })
         getFeaturedPosts().then((data)=>{
+            data.reverse();
             setFeaturedPosts(data)
         })
     },[])
